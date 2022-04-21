@@ -8,8 +8,8 @@ const games = document.querySelector(".gamesContainer");
 const loading = document.querySelector(".container");
 
 setTimeout(function(){
-loading.remove()
-document.body.classList.remove(`bodyfix`)
+loading.remove();
+document.body.classList.remove(`bodyfix`);
 },3000);
 
 async function getGameInfo() {
@@ -22,7 +22,7 @@ async function getGameInfo() {
 
     for (let i = 0; i < 8; i++) {
         const game = data[i];
-        console.log({game})
+        console.log({game});
 
         setTimeout(function() {
         games.innerHTML += `<li><p class="gameHeader">${game.name}</p> Rating: ${game.rating} - Tags: ${game.tags.length}</li>`            
